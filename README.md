@@ -1,5 +1,5 @@
-# Data Protection Project
-An app under development that will be used to find train information.
+# Train Informmation
+An application for finding train information.
 
 ## Table of contents
 * [General info](#general-info)
