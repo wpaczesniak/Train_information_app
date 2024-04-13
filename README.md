@@ -15,17 +15,17 @@ The app will make it possible to find information about the time and place of a 
 train consists of and the route of a particular train. The purpose of the app is to learn about new technologies.
 ## Technologies:
 
-blinker 1.7.0
-click 8.1.7
-Flask 3.0.2
-greenlet 3.0.3
-itsdangerous 2.1.2
-Jinja2 3.1.3
-MarkupSafe 2.1.5
-numpy 1.26.3
-SQLAlchemy 2.0.29
-typing_extensions 4.10.0
-Werkzeug 3.0.1
+* blinker 1.7.0
+* click 8.1.7
+* Flask 3.0.2
+* greenlet 3.0.3
+* itsdangerous 2.1.2
+* Jinja2 3.1.3
+* MarkupSafe 2.1.5
+* numpy 1.26.3
+* SQLAlchemy 2.0.29
+* typing_extensions 4.10.0
+* Werkzeug 3.0.1
 
 ## Setup
 
