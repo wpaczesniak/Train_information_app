@@ -74,8 +74,8 @@ The system user will have the ability to check:
 
 ###  Train carriages
 <div style="display: flex; align-items: center; justify-content: center;">
-  <img src="./ImagesGUI/searchCar.png" width="350" height="650">
-  <img src="./ImagesGUI/resultCar.png" width="350" height="650">
+  <img src="./ImagesGUI/searchCar.png" width="350" height="450">
+  <img src="./ImagesGUI/resultCar.png" width="350" height="450">
 </div>
 
 
