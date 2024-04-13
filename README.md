@@ -69,6 +69,25 @@ The system user will have the ability to check:
 
 ## Illustrations:
 
+### Home Page
+![HomePage](./ImagesGUI/HomePage.png)
+
+###  Train carriages
+<div style="display: flex; align-items: center; justify-content: center;">
+  <img src="./ImagesGUI/searchCar.png" width="350" height="650">
+  <img src="./ImagesGUI/resultCar.png" width="350" height="650">
+</div>
 
 
+### Train Departures
+<div style="display: flex; align-items: center; justify-content: center;">
+  <img src="./ImagesGUI/searchDepartures.png" width="350" height="650">
+  <img src="./ImagesGUI/resultDepartures.png" width="350" height="650">
+</div>
 
+
+### Train route
+<div style="display: flex; align-items: center; justify-content: center;">
+  <img src="./ImagesGUI/searchRoute.png" width="350" height="650">
+  <img src="./ImagesGUI/resultRoute.png" width="350" height="650">
+</div>
