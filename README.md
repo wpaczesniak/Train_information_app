@@ -89,5 +89,5 @@ The system user will have the ability to check:
 ### Train route
 <div style="display: flex; align-items: center; justify-content: center;">
   <img src="./ImagesGUI/searchRoute.png" width="350" height="450">
-  <img src="./ImagesGUI/resultRoute.png" width="450" height="650">
+  <img src="./ImagesGUI/resultRoute.png" width="550" height="650">
 </div>
