@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/details.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="train-details-container">
+            <h2 class="header">Train Details: {{ train_number }}</h2>
+            <div class="detail-item">
+                <strong>Locomotive Type:</strong> {{ locomotive.type }}
+            </div>
+            <div class="detail-item">
+                <strong>Side Number:</strong> {{ locomotive.side_number }}
+            </div>
+            <div class="detail-item">
+                <strong>List of Cars:</strong>
+                <ul class="nobullets">
+                    {% for car in cars %}
+                    <li>Car No {{ car.car_number }} - Class: {{ car.class }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="text-center mt-3">
+                <a href="{{ url_for('results') }}" class="btn btn-info">Return to Results</a>
+            </div>
+        </div>
+        <a href="{{ url_for('home') }}" class="btn btn-primary btn-back">Return to Home Page</a>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

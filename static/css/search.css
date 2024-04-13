@@ -1,0 +1,20 @@
+.search-container {
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+.search-container .btn-primary {
+    width: 100%;
+    border-radius: 20px;
+}
+.search-container label {
+    text-align: left;
+    display: block;
+    margin-bottom: .5rem;
+}
+.search-container input {
+    border-radius: 20px;
+}

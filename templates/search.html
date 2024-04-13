@@ -1,0 +1,65 @@
+{#
+{% extends "base.html" %}
+{% block title %}Wyszukanie pociągu{% endblock %}
+{% block content %}
+<style>
+    .search-container {
+        max-width: 400px; /* Maksymalna szerokość kontenera */
+        background-color: #fff; /* Białe tło */
+        padding: 20px; /* Wewnętrzny padding */
+        border-radius: 5px; /* Zaokrąglenie rogów */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+        margin-bottom: 30px; /* Odstęp od dolnej części kontenera */
+    }
+    .search-container .btn-primary {
+        width: 100%; /* Pełna szerokość przycisku */
+        border-radius: 20px; /* Zaokrąglone rogi przycisku */
+    }
+    .search-container label {
+        text-align: left; /* Wyrównanie tekstu etykiet do lewej */
+        display: block; /* Etykiety jako blok */
+        margin-bottom: .5rem; /* Odstęp pod etykietą */
+    }
+    .search-container input {
+        border-radius: 20px; /* Zaokrąglone rogi pól tekstowych */
+    }
+</style>
+<div class="container d-flex vh-100 justify-content-center align-items-center">
+    <div class="search-container text-center">
+        <h2>Wpisz dane pociągu</h2>
+        <form action="{{ url_for('results') }}" method="post">
+            <div class="form-group">
+                <label for="trainNumber">Numer pociągu:</label>
+                <input type="text" class="form-control" id="trainNumber" name="trainNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="stationName">Nazwa stacji:</label>
+                <input type="text" class="form-control" id="stationName" name="stationName" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Szukaj</button>
+        </form>
+    </div>
+</div>
+{% endblock %} 
+#}
+{% extends "base.html" %}
+{% block title %}Train Search{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
+<div class="container d-flex vh-100 justify-content-center align-items-center">
+    <div class="search-container text-center">
+        <h2>Enter Train Details</h2>
+        <form action="{{ url_for('results') }}" method="post">
+            <div class="form-group">
+                <label for="trainNumber">Train number:</label>
+                <input type="text" class="form-control" id="trainNumber" name="trainNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="stationName">Station name:</label>
+                <input type="text" class="form-control" id="stationName" name="stationName" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

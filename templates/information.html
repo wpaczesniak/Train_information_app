@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/information.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h2>Train Information</h2>
+        {% if info %}
+            <ul>
+                <li>Train number: {{ info['train_number'] }}</li>
+                <li>Station: {{ info['station'] }}</li>
+                <li>Arrival time: {{ info['arrival_time'] }}</li>
+                <li>Departure time: {{ info['departure_time'] }}</li>
+                <li>Platform: {{ info['platform'] }}</li>
+                <li>Track: {{ info['track'] }}</li>
+            </ul>
+        {% else %}
+            <p>No information found for the specified train and station.</p>
+        {% endif %}
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+body, html {
+    height: 100%;
+    background-color: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+}
+.card h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+.card ul {
+    padding: 0;
+    list-style: none;
+}
+.card ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+.card ul li:last-child {
+    border-bottom: none;
+}

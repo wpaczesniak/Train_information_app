@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="results-container">
+            <h2 class="header">Search Results</h2>
+            {% if train_details %}
+                <div class="result-item">
+                    <strong>Train number:</strong> {{ train_details.train_number }}
+                </div>
+                <div class="result-item">
+                    <strong>Station name:</strong> {{ train_details.station_name }}
+                </div>
+                <div class="result-item">
+                    <strong>Number of cars:</strong> {{ train_details.number_of_wagons }}
+                </div>
+                <div class="result-item">
+                    {% if train_details.conductor_wagon %}
+                        <strong>Conductor car:</strong> {{ train_details.conductor_wagon }}
+                    {% else %}
+                        <strong>Information:</strong> There is no conductor in the train.
+                    {% endif %}
+                </div>
+                <!-- Adding a "Details" button -->
+                <div class="text-center mt-3">
+                    <a href="{{ url_for('details', train_number=train_details.train_number, station_name=train_details.station_name) }}" class="btn btn-info">Details</a>
+                </div>
+            {% else %}
+                <div class="result-item">
+                    No information found for the given train number and station.
+                </div>
+            {% endif %}
+        </div>
+        <a href="{{ url_for('home') }}" class="btn btn-primary btn-back">Return to Home Page</a>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

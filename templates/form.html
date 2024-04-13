@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Train Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Train Data</h2>
+        <form action="/results" method="post">
+            <div class="form-group">
+                <label for="train_number">Train Number:</label>
+                <input type="text" class="form-control" id="train_number" name="train_number" required>
+            </div>
+            <div class="form-group">
+                <label for="station_name">Station Name:</label>
+                <input type="text" class="form-control" id="station_name" name="station_name" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

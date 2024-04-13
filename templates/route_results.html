@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Route Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/route_results.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="results-container">
+            <h2 class="header">Train Route Results</h2>
+            {% if route_information %}
+                <ul class="list-group nobullets">
+                    {% for stop in route_information %}
+                        <li class="list-group-item route-detail-item">
+                            Station: {{ stop.station }}, Platform: {{ stop.platform }}, Track: {{ stop.track }},
+                            Arrival Time: {{ stop.arrival_time }},
+                            Departure Time: {{ stop.departure_time }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div class="route-detail-item">
+                    No route information available for the provided train number.
+                </div>
+            {% endif %}
+            <div class="text-center mt-3">
+                <a href="{{ url_for('home') }}" class="btn btn-info btn-back">Return to Home Page</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
